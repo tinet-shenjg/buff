@@ -21,7 +21,7 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>service-hi</module>
+        <module>admin</module>
     </modules>
 
     <properties>
