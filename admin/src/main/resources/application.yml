@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: admin
+  thymeleaf:
+    prefix: classpath:/templates/
 
 eureka:
   client:
