@@ -22,6 +22,9 @@
     <modules>
         <module>eureka-server</module>
         <module>admin</module>
+        <module>service-feign</module>
+        <module>hi</module>
+        <module>config-server</module>
     </modules>
 
     <properties>
@@ -36,11 +39,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.11</version>
         </dependency>
     </dependencies>
 
@@ -68,6 +66,16 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-core</artifactId>
                 <version>2.8.0</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.2.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
