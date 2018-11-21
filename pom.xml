@@ -20,11 +20,14 @@
     </parent>
 
     <modules>
-        <module>eureka-server</module>
-        <module>admin</module>
-        <module>service-feign</module>
-        <module>hi</module>
-        <module>config-server</module>
+        <module>buff-eureka</module>
+        <module>buff-admin</module>
+        <module>buff-feign</module>
+        <module>buff-base</module>
+        <module>buff-config</module>
+        <module>buff-auth</module>
+        <module>buff-core</module>
+        <module>buff-gateway</module>
     </modules>
 
     <properties>
