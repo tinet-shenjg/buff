@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shenjg.zuul</groupId>
-    <artifactId>service-zuul</artifactId>
+    <artifactId>buff-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>service-zuul</name>
+    <name>buff-gateway</name>
     <description>zuul</description>
 
     <parent>
         <groupId>com.shenjg</groupId>
-        <artifactId>sc</artifactId>
+        <artifactId>buff</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

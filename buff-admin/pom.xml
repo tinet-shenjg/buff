@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shenjg</groupId>
-    <artifactId>admin</artifactId>
+    <artifactId>buff-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>admin</name>
+    <name>buff-admin</name>
     <description>admin module</description>
 
     <parent>
         <groupId>com.shenjg</groupId>
-        <artifactId>sc</artifactId>
+        <artifactId>buff</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

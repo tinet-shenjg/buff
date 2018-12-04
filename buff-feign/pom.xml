@@ -4,16 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shenjg</groupId>
-	<artifactId>service-feign</artifactId>
+	<artifactId>buff-feign</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>service-feign</name>
+	<name>buff-feign</name>
 	<description>feign</description>
 
 	<parent>
 		<groupId>com.shenjg</groupId>
-		<artifactId>sc</artifactId>
+		<artifactId>buff</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
