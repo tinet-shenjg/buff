@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class AdminApplication {
+public class AdminApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(AdminApplication.class, args);
