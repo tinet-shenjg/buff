@@ -1,6 +1,8 @@
 package com.shenjg.admin.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.shenjg.admin.entity.AdminUser;
+import com.shenjg.admin.mapper.AdminUserMapper;
 import com.shenjg.admin.model.UserModel;
 import io.swagger.annotations.ApiOperation;
 import org.elasticsearch.action.get.GetRequest;
@@ -39,6 +41,9 @@ public class AdminUserController {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;
+
+    @Autowired
+    private AdminUserMapper adminUserMapper;
 
     /**
      * 获取用户信息
@@ -80,6 +85,23 @@ public class AdminUserController {
             }
         }
         return userModelList;
+    }
+
+    /**
+     * 获取用户信息ceshi
+     *
+     * @return
+     */
+    @ApiOperation(value = "获取用户名222", notes = "不要乱用")
+    @GetMapping("/list")
+    public List<AdminUser> list() {
+        AdminUser adminUser = adminUserMapper.selectByEvenUserId(1);
+        AdminUser adminUser1 = adminUserMapper.selectByOddUserId(1);
+
+        List<AdminUser> adminUsers = new ArrayList<>();
+        adminUsers.add(adminUser);
+        adminUsers.add(adminUser1);
+        return adminUsers;
     }
 
 }
