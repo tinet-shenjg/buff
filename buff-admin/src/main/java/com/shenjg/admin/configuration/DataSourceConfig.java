@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.PlatformTransactionManager;
+
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,14 +26,14 @@ public class DataSourceConfig {
 
     @Bean(name = "dataSource")
     public DataSource dataSource() {
-        //按照目标数据源名称和目标数据源对象的映射存放在Map中
+        // 按照目标数据源名称和目标数据源对象的映射存放在Map中
         Map<Object, Object> targetDataSources = new HashMap<>();
         targetDataSources.put("master", properties.getMaster());
         targetDataSources.put("slave", properties.getSlave());
-        //采用是想AbstractRoutingDataSource的对象包装多数据源
+        // 采用是想AbstractRoutingDataSource的对象包装多数据源
         DynamicDataSource dataSource = new DynamicDataSource();
         dataSource.setTargetDataSources(targetDataSources);
-        //设置默认的数据源，当拿不到数据源时，使用此配置
+        // 配置默认的数据源
         dataSource.setDefaultTargetDataSource(properties.getMaster());
         return dataSource;
     }

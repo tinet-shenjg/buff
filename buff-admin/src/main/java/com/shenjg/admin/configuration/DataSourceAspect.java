@@ -1,10 +1,5 @@
 package com.shenjg.admin.configuration;
 
-/**
- * @author shenjg
- * @date 2018/12/25
- **/
-
 import com.shenjg.admin.announce.TargetDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -19,7 +14,10 @@ import java.lang.reflect.Method;
 
 /**
  * 数据源AOP切面定义
- */
+ *
+ * @author shenjg
+ * @date 2018/12/25
+ **/
 @Component
 @Aspect
 @Slf4j

@@ -1,18 +1,16 @@
 package com.shenjg.admin.configuration;
 
+
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
+
 /**
  * 动态数据源实现类
  *
  * @author shenjg
  * @date 2018/12/25
  **/
-
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
-
-/**
- *
- */
 @Slf4j
 public class DynamicDataSource extends AbstractRoutingDataSource{
     //数据源路由，此方用于产生要选取的数据源逻辑名称
