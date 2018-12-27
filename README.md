@@ -6,3 +6,4 @@ SpringCloud学习项目
 ## 配置中心 --- Config
 ## 网关 --- zuul
 ## 日志 --- logback
+## 服务调用 --- Feign
