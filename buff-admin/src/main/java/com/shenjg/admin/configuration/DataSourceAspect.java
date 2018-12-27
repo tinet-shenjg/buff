@@ -22,6 +22,9 @@ import java.lang.reflect.Method;
 @Aspect
 @Slf4j
 public class DataSourceAspect {
+
+    private final String[] QUERY_PREFIX = {"select"};
+
     //切换放在mapper接口的方法上，所以这里要配置AOP切面的切入点
     @Pointcut("execution( * com.shenjg.admin.mapper.*.*(..))")
     public void dataSourcePointCut() {
@@ -51,7 +54,22 @@ public class DataSourceAspect {
 
     //执行完切面后，将线程共享中的数据源名称清空
     @After("dataSourcePointCut()")
-    public void after(JoinPoint joinPoint) {
+    public void after() {
         DynamicDataSourceHolder.removeDataSource();
+    }
+
+    /**
+     * 判断是否为select
+     *
+     * @param methodName
+     * @return
+     */
+    private Boolean isQueryMethod(String methodName) {
+        for (String prefix : QUERY_PREFIX) {
+            if (methodName.startsWith(prefix)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

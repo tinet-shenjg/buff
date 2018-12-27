@@ -95,7 +95,7 @@ public class AdminUserController {
     @ApiOperation(value = "获取用户名222", notes = "不要乱用")
     @GetMapping("/list")
     public List<AdminUser> list() {
-        AdminUser adminUser = adminUserMapper.selectByEvenUserId(1);
+        AdminUser adminUser = adminUserMapper.getById(1);
         AdminUser adminUser1 = adminUserMapper.selectByOddUserId(1);
 
         List<AdminUser> adminUsers = new ArrayList<>();

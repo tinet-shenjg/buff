@@ -5,7 +5,7 @@
 
 	<groupId>com.shenjg</groupId>
 	<artifactId>buff-feign</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>buff-feign</name>
@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>com.shenjg</groupId>
 		<artifactId>buff</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<properties>

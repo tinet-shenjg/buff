@@ -24,7 +24,7 @@ public class AdminApplicationTests {
         AdminUser userInfo;
         for (int i = 1; i <= 1; i++) {
             //i为奇数时调用selectByOddUserId方法获取，i为偶数时调用selectByEvenUserId方法获取
-            userInfo = i % 2 == 1 ? adminUserMapper.selectByOddUserId(i) : adminUserMapper.selectByEvenUserId(i);
+            userInfo = i % 2 == 1 ? adminUserMapper.selectByOddUserId(i) : adminUserMapper.getById(i);
             log.info("{}->={}", userInfo.getPassword(), userInfo.getUsername());
         }
 

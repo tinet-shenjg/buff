@@ -44,3 +44,12 @@ hikari:
     idle-timeout: 600000
     max-lifetime: 1765000
     read-only: true
+
+
+# Feign连接端点
+buff:
+  app:
+    buff-base:
+      url: http://localhost:9092
+    buff-auth:
+      url: http://localhost:8899

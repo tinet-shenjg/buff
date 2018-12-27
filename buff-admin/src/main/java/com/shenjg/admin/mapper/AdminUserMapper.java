@@ -20,6 +20,7 @@ public interface AdminUserMapper {
             "select * from admin_user where id > 0",
             "</script>"})
     AdminUser selectByOddUserId(Integer id);
+
     /**
      * 从test2数据源中获取用户信息
      */
@@ -27,5 +28,5 @@ public interface AdminUserMapper {
             "select * from admin_user where id > 0",
             "</script>"})
     @TargetDataSource("slave")
-    AdminUser selectByEvenUserId(Integer id);
+    AdminUser getById(Integer id);
 }

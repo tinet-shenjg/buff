@@ -1,4 +1,4 @@
-package com.shenjg.service.hi;
+package com.shenjg.base;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
