@@ -8,14 +8,17 @@
 
 # buff Microservice Architecture  
 ---
-**基于Spring Cloud、OAuth2.0、Vue的前后端分离的权限管理系统**      
+**基于Spring Cloud、OAuth2.0、Vue的前后端分离的权限管理系统**  
+ 
+  
+#### 基础服务开发只需要关注base base-pi 即可    
  
 
  ### 模块说明
 ``` lua
 buff
-├── buff-auth -- 授权服务模块
-├── buff-auth-api -- 授权服务提供接口
+├── buff-auth -- 授权服务模块  (开发ing)
+├── buff-auth-api -- 授权服务提供接口(开发ing)
 ├── buff-base -- 系统公共服务模块
 ├── buff-base-api -- 系统公共服务模块接口 
 ├── buff-config -- 配置中心
@@ -24,7 +27,7 @@ buff
 ├── buff-core -- 公共的类文件和工具
 ├── buff-admin -- 与前台对接服务
 ```
-### 功能列表
+### 功能列表(开发ing)
 - 完善登录：账号密码模式、短信验证码模式、社交账号模式均整合Spring security oAuth
 - 单点登录：基于Srping security oAuth 提供单点登录接口，方便其他系统对接
 - 用户管理：用户是系统操作者，该功能主要完成系统用户配置。
