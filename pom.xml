@@ -22,7 +22,6 @@
     <modules>
         <module>buff-eureka</module>
         <module>buff-admin</module>
-        <module>buff-feign</module>
         <module>buff-base</module>
         <module>buff-config</module>
         <module>buff-auth</module>
