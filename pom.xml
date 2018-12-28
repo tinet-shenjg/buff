@@ -28,6 +28,7 @@
         <module>buff-core</module>
         <module>buff-gateway</module>
         <module>buff-base-api</module>
+        <module>buff-auth-api</module>
     </modules>
 
     <properties>

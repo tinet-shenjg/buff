@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableFeignClients("com.shenjg")
 @ComponentScan("com.shenjg")
 @MapperScan("com.shenjg.base.mapper")
-public class HiApplication {
+public class BaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HiApplication.class, args);
+        SpringApplication.run(BaseApplication.class, args);
     }
 
     @Value("${server.port}")
