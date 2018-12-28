@@ -1,4 +1,4 @@
-package com.shenjg.admin.configuration;
+package com.shenjg.base.configuration;
 
 
 

@@ -1,4 +1,4 @@
-package com.shenjg.admin.entity;
+package com.shenjg.base.entity;
 
 import lombok.Data;
 

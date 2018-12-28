@@ -1,4 +1,4 @@
-package com.shenjg.admin.configuration;
+package com.shenjg.base.configuration;
 
 /**
  * 动态数据源持有者，负责利用ThreadLocal存取数据源名称

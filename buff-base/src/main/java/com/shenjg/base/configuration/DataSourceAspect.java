@@ -1,14 +1,14 @@
-package com.shenjg.admin.configuration;
+package com.shenjg.base.configuration;
 
-import com.shenjg.admin.announce.TargetDataSource;
+import com.shenjg.base.announce.TargetDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
@@ -26,7 +26,7 @@ public class DataSourceAspect {
     private final String[] QUERY_PREFIX = {"select"};
 
     //切换放在mapper接口的方法上，所以这里要配置AOP切面的切入点
-    @Pointcut("execution( * com.shenjg.admin.mapper.*.*(..))")
+    @Pointcut("execution( * com.shenjg.base.mapper.*.*(..))")
     public void dataSourcePointCut() {
     }
 

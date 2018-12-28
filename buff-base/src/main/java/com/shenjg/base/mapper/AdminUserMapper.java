@@ -1,7 +1,7 @@
-package com.shenjg.admin.mapper;
+package com.shenjg.base.mapper;
 
-import com.shenjg.admin.announce.TargetDataSource;
-import com.shenjg.admin.entity.AdminUser;
+import com.shenjg.base.announce.TargetDataSource;
+import com.shenjg.base.entity.AdminUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
