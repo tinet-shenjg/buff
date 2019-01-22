@@ -20,15 +20,15 @@
     </parent>
 
     <modules>
+        <module>buff-core</module>
+        <module>buff-base-api</module>
+        <module>buff-auth-api</module>
         <module>buff-eureka</module>
-        <module>buff-admin</module>
         <module>buff-base</module>
         <module>buff-config</module>
         <module>buff-auth</module>
-        <module>buff-core</module>
         <module>buff-gateway</module>
-        <module>buff-base-api</module>
-        <module>buff-auth-api</module>
+        <module>buff-admin</module>
     </modules>
 
     <properties>
@@ -129,13 +129,13 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
 </project>

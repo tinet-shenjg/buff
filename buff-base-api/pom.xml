@@ -17,10 +17,5 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.shenjg</groupId>
-            <artifactId>buff-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 </project>
