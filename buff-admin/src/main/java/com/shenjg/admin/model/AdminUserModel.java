@@ -9,7 +9,7 @@ import lombok.Data;
  * @date 2018/12/25
  **/
 @Data
-public class AdminUser {
+public class AdminUserModel {
 
     private String username;
 

@@ -26,6 +26,35 @@ spring:
     max-connection-per-route: 100
     region: cn-northwest-1 # 当使用AWS ES时，需要配置AWS region
 
+hikari:
+  master:
+    jdbc-url: jdbc:postgresql://47.101.179.158:5432/buff
+    username: postgres
+    password: postgres
+    maximum-pool-size: 20
+    pool-name: master
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1765000
+  slave:
+    jdbc-url: jdbc:postgresql://47.101.179.158:5432/buff
+    username: postgres
+    password: postgres
+    maximum-pool-size: 80
+    pool-name: slave
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1765000
+    read-only: true
+
+# Feign连接端点
+buff:
+  app:
+    buff-base:
+      url: http://localhost:9092
+    buff-auth:
+      url: http://localhost:8899
+
 eureka:
   client:
     serviceUrl:

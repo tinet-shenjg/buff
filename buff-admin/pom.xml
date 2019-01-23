@@ -29,6 +29,11 @@
         </dependency>
         <dependency>
             <groupId>com.shenjg</groupId>
+            <artifactId>buff-auth-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.shenjg</groupId>
             <artifactId>buff-base-api</artifactId>
             <version>1.0.0</version>
         </dependency>

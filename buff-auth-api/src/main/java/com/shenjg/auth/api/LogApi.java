@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author shenjg
  * @date 2018/12/27
  **/
-@FeignClient(name = "LogApi", url = "${buff.app.buff-base.url}")
+@FeignClient(name = "LogApi", url = "${buff.app.buff-auth.url}")
 public interface LogApi {
 
     @GetMapping("/LogApi/test")
