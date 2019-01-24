@@ -14,11 +14,6 @@ spring:
     max-connection-per-route: 100
     region: cn-northwest-1 # 当使用AWS ES时，需要配置AWS region
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9999/eureka/
-
 hikari:
   master:
     jdbc-url: jdbc:postgresql://47.101.179.158:5432/buff

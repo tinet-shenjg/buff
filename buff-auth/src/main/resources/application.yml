@@ -55,11 +55,6 @@ buff:
     buff-auth:
       url: http://localhost:8899
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9999/eureka/
-
 
 # MyBatis配置
 mybatis:
