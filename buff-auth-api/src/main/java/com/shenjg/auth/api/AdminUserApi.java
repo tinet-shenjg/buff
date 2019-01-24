@@ -2,7 +2,7 @@ package com.shenjg.auth.api;
 
 import com.shenjg.auth.entity.AdminUser;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 用户信息api
@@ -20,7 +20,7 @@ public interface AdminUserApi {
      * @return
      */
     @GetMapping("/AdminUserApi/getByUsername")
-    AdminUser getByUsername(String username);
+    AdminUser getByUsername(@RequestParam("username") String username);
 
     /**
      * 根据用户名和密码获取用户信息
@@ -29,7 +29,35 @@ public interface AdminUserApi {
      * @return
      */
     @GetMapping("/AdminUserApi/getByAdminUser")
-    AdminUser getByAdminUser(AdminUser adminUser);
+    AdminUser getByAdminUser(@RequestBody AdminUser adminUser);
+
+    /**
+     * 添加用户信息
+     *
+     * @param adminUser
+     * @return
+     */
+    @PostMapping("/AdminUserApi/save")
+    AdminUser save(@RequestBody AdminUser adminUser);
+
+    /**
+     * 更新用户信息
+     *
+     * @param adminUser
+     * @return
+     */
+    @PutMapping("/AdminUserApi/update")
+    AdminUser update(@RequestBody AdminUser adminUser);
+
+
+    /**
+     * 删除用户信息
+     *
+     * @param adminUser
+     * @return
+     */
+    @DeleteMapping("/AdminUserApi/delete")
+    Integer delete(@RequestBody AdminUser adminUser);
 
 
 }

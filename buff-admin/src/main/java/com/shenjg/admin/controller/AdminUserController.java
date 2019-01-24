@@ -1,7 +1,11 @@
 package com.shenjg.admin.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.shenjg.admin.model.AdminUserModel;
 import com.shenjg.admin.model.UserModel;
+import com.shenjg.auth.api.AdminUserApi;
+import com.shenjg.auth.entity.AdminUser;
+import com.shenjg.core.data.ResponseModel;
 import io.swagger.annotations.ApiOperation;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -14,10 +18,10 @@ import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,6 +44,9 @@ public class AdminUserController {
     private RestHighLevelClient restHighLevelClient;
 
 
+    @Autowired
+    private AdminUserApi adminUserApi;
+
     /**
      * 获取用户信息
      *
@@ -47,7 +54,7 @@ public class AdminUserController {
      * @return
      */
     @ApiOperation(value = "获取用户名", notes = "不要乱用")
-    @GetMapping("/getUser")
+    @GetMapping
     public List<UserModel> getUser(String username) {
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.from(0);
@@ -81,6 +88,16 @@ public class AdminUserController {
         }
         return userModelList;
     }
+
+    @ApiOperation(value = "新增用户", notes = "不要乱用")
+    @PostMapping
+    public ResponseModel save(@RequestBody AdminUserModel adminUserModel) {
+        AdminUser adminUser = new AdminUser();
+        BeanUtils.copyProperties(adminUserModel, adminUser);
+        adminUserApi.save(adminUser);
+        return new ResponseModel(HttpStatus.OK,"创建成功", adminUser);
+    }
+
 
 
 }

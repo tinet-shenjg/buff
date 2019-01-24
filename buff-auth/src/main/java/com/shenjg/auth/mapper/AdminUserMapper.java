@@ -2,6 +2,7 @@ package com.shenjg.auth.mapper;
 
 import com.shenjg.auth.annotation.TargetDataSource;
 import com.shenjg.auth.entity.AdminUser;
+import com.shenjg.core.data.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -13,7 +14,7 @@ import org.apache.ibatis.annotations.Select;
  * @date 2018/12/25
  **/
 @Mapper
-public interface AdminUserMapper {
+public interface AdminUserMapper extends BaseMapper<AdminUser, Integer>{
     /**
      * 从test1数据源中获取用户信息
      */
@@ -42,9 +43,7 @@ public interface AdminUserMapper {
             "</script>"})
     AdminUser getByUsername(@Param("username") String username);
 
-    @Select({"<script>",
-            "select * from admin_user where username = #{username}" +
-                    "and password = #{password}",
-            "</script>"})
     AdminUser getByAdminUser(AdminUser adminUser);
+
+    AdminUser save(AdminUser adminUser);
 }

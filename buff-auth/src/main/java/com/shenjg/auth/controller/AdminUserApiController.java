@@ -4,10 +4,12 @@ import com.shenjg.auth.api.AdminUserApi;
 import com.shenjg.auth.entity.AdminUser;
 import com.shenjg.auth.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * adminuserApi实现
+ * adminUserApi实现
  *
  * @author shenjg
  * @date 2019/01/23
@@ -19,12 +21,27 @@ public class AdminUserApiController implements AdminUserApi{
     private AdminUserService adminUserService;
 
     @Override
-    public AdminUser getByUsername(String username) {
+    public AdminUser getByUsername(@RequestParam("username") String username) {
         return adminUserService.getByUsername(username);
     }
 
     @Override
-    public AdminUser getByAdminUser(AdminUser adminUser) {
+    public AdminUser getByAdminUser(@RequestBody AdminUser adminUser) {
         return adminUserService.getByAdminUser(adminUser);
+    }
+
+    @Override
+    public AdminUser save(@RequestBody AdminUser adminUser) {
+        return adminUserService.save(adminUser);
+    }
+
+    @Override
+    public AdminUser update(@RequestBody AdminUser adminUser) {
+        return null;
+    }
+
+    @Override
+    public Integer delete(@RequestBody AdminUser adminUser) {
+        return null;
     }
 }

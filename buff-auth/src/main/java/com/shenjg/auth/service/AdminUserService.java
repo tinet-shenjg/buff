@@ -28,4 +28,8 @@ public class AdminUserService {
     public AdminUser getByAdminUser(AdminUser adminUser) {
         return adminUserMapper.getByAdminUser(adminUser);
     }
+
+    public AdminUser save(AdminUser adminUser) {
+        return adminUserMapper.save(adminUser);
+    }
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableFeignClients("com.shenjg")
 @ComponentScan("com.shenjg")
-@MapperScan("com.shenjg.auth.mapper")
+@MapperScan("com.shenjg")
 public class AuthApplication {
 
 	public static void main(String[] args) {
