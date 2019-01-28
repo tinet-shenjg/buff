@@ -99,7 +99,7 @@ public class AdminUserController {
     }
 
     @ApiOperation(value = "修改用户信息", notes = "不要乱用")
-    @PostMapping
+    @PutMapping
     public ResponseModel update(@RequestBody AdminUserModel adminUserModel) {
         AdminUser adminUser = new AdminUser();
         BeanUtils.copyProperties(adminUserModel, adminUser);
