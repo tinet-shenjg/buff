@@ -32,4 +32,8 @@ public class AdminUserService {
     public AdminUser save(AdminUser adminUser) {
         return adminUserMapper.save(adminUser);
     }
+
+    public AdminUser update(AdminUser adminUser) {
+        return adminUserMapper.update(adminUser);
+    }
 }

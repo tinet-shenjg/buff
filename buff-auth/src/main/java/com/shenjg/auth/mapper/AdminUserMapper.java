@@ -46,4 +46,6 @@ public interface AdminUserMapper extends BaseMapper<AdminUser, Integer>{
     AdminUser getByAdminUser(AdminUser adminUser);
 
     AdminUser save(AdminUser adminUser);
+
+    AdminUser update(AdminUser adminUser);
 }

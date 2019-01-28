@@ -98,6 +98,14 @@ public class AdminUserController {
         return new ResponseModel(HttpStatus.OK,"创建成功", adminUser);
     }
 
+    @ApiOperation(value = "修改用户信息", notes = "不要乱用")
+    @PostMapping
+    public ResponseModel update(@RequestBody AdminUserModel adminUserModel) {
+        AdminUser adminUser = new AdminUser();
+        BeanUtils.copyProperties(adminUserModel, adminUser);
+        adminUserApi.update(adminUser);
+        return new ResponseModel(HttpStatus.OK,"修改成功", adminUser);
+    }
 
 
 }

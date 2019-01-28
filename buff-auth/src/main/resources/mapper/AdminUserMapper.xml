@@ -26,5 +26,12 @@
           (#{username},#{password})
     </select>
 
+    <select id="update" parameterType="com.shenjg.auth.entity.AdminUser" resultMap="BaseResultMap">
+        update admin_user
+        set
+        password = #{password}
+        where id = #{id}
+    </select>
+
 
 </mapper>

@@ -37,7 +37,7 @@ public class AdminUserApiController implements AdminUserApi{
 
     @Override
     public AdminUser update(@RequestBody AdminUser adminUser) {
-        return null;
+        return adminUserService.update(adminUser);
     }
 
     @Override
