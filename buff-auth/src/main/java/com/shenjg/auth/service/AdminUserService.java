@@ -5,6 +5,8 @@ import com.shenjg.auth.mapper.AdminUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * adminUserService
  *
@@ -35,5 +37,9 @@ public class AdminUserService {
 
     public AdminUser update(AdminUser adminUser) {
         return adminUserMapper.update(adminUser);
+    }
+
+    public List<AdminUser> list() {
+        return adminUserMapper.list();
     }
 }

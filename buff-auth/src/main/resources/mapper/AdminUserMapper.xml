@@ -33,5 +33,8 @@
         where id = #{id}
     </select>
 
+    <select id="list" resultMap="BaseResultMap">
+        SELECT id,username from admin_user
+    </select>
 
 </mapper>

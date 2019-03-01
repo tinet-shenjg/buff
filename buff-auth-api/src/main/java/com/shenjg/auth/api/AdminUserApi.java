@@ -4,6 +4,8 @@ import com.shenjg.auth.entity.AdminUser;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * 用户信息api
  *
@@ -12,24 +14,6 @@ import org.springframework.web.bind.annotation.*;
  **/
 @FeignClient(name = "AdminUserApi", url = "${buff.app.buff-auth.url}")
 public interface AdminUserApi {
-
-    /**
-     * 根据用户名获取用户信息
-     *
-     * @param username
-     * @return
-     */
-    @GetMapping("/AdminUserApi/getByUsername")
-    AdminUser getByUsername(@RequestParam("username") String username);
-
-    /**
-     * 根据用户名和密码获取用户信息
-     *
-     * @param adminUser
-     * @return
-     */
-    @GetMapping("/AdminUserApi/getByAdminUser")
-    AdminUser getByAdminUser(@RequestBody AdminUser adminUser);
 
     /**
      * 添加用户信息
@@ -58,6 +42,32 @@ public interface AdminUserApi {
      */
     @DeleteMapping("/AdminUserApi/delete")
     Integer delete(@RequestBody AdminUser adminUser);
+
+    /**
+     * 获取所有用户信息
+     *
+     * @return
+     */
+    @GetMapping("AdminUserApi/list")
+    List<AdminUser> list();
+
+    /**
+     * 根据用户名获取用户信息
+     *
+     * @param username
+     * @return
+     */
+    @GetMapping("/AdminUserApi/getByUsername")
+    AdminUser getByUsername(@RequestParam("username") String username);
+
+    /**
+     * 根据用户名和密码获取用户信息
+     *
+     * @param adminUser
+     * @return
+     */
+    @GetMapping("/AdminUserApi/getByAdminUser")
+    AdminUser getByAdminUser(@RequestBody AdminUser adminUser);
 
 
 }

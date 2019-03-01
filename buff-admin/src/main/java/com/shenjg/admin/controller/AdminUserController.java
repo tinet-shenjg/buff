@@ -107,5 +107,13 @@ public class AdminUserController {
         return new ResponseModel(HttpStatus.OK,"修改成功", adminUser);
     }
 
+    @ApiOperation(value = "获取所有用户信息", notes = "不要乱用")
+    @GetMapping("/list")
+    public ResponseModel list(){
+        List<AdminUser> adminUsers = adminUserApi.list();
+
+        return new ResponseModel(HttpStatus.OK, "获取所有用户信息完成",adminUsers);
+    }
+
 
 }

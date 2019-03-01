@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * adminUserApi实现
  *
@@ -43,5 +45,10 @@ public class AdminUserApiController implements AdminUserApi{
     @Override
     public Integer delete(@RequestBody AdminUser adminUser) {
         return null;
+    }
+
+    @Override
+    public List<AdminUser> list() {
+        return adminUserService.list();
     }
 }

@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 /**
  * 管理员用户mapper
  *
@@ -48,4 +50,11 @@ public interface AdminUserMapper extends BaseMapper<AdminUser, Integer>{
     AdminUser save(AdminUser adminUser);
 
     AdminUser update(AdminUser adminUser);
+
+    /**
+     * 获取所有用户信息
+     *
+     * @return
+     */
+    List<AdminUser> list();
 }
