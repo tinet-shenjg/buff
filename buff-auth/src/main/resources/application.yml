@@ -28,18 +28,18 @@ spring:
 
 hikari:
   master:
-    jdbc-url: jdbc:postgresql://47.101.179.158:5432/buff
-    username: postgres
-    password: postgres
+    jdbc-url: jdbc:postgresql://localhost:5432/buff
+    username: root
+    password: 123456
     maximum-pool-size: 20
     pool-name: master
     connection-timeout: 30000
     idle-timeout: 600000
     max-lifetime: 1765000
   slave:
-    jdbc-url: jdbc:postgresql://47.101.179.158:5432/buff
-    username: postgres
-    password: postgres
+    jdbc-url: jdbc:postgresql://localhost:5432/buff
+    username: root
+    password: 123456
     maximum-pool-size: 80
     pool-name: slave
     connection-timeout: 30000
